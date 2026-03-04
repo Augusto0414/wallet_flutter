@@ -53,6 +53,12 @@ WALLET_ID="wal-001"
    flutter run
    ```
 
+### Understanding the IDs (`USER_ID` & `WALLET_ID`)
+The identifiers `usr-001` and `wal-001` used in the `.env` are **development constants** used to simulate a session:
+- **Source**: These must exist in your backend database. When you run the backend for the first time, these IDs are typically created during the first transactions or can be manually inserted into the `User` and `Wallet` tables.
+- **Purpose**: Since this version of the app doesn't have a Login screen yet, we hardcode these IDs in the `.env` so the app knows which wallet to fetch and update.
+- **Production**: In a real app, `USER_ID` would be retrieved from an authentication service (like Firebase or Auth0) after a successful login, and `WALLET_ID` would be fetched from the user's profile.
+
 ---
 
 ## 3. How it Works
